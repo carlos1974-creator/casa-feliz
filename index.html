@@ -16,48 +16,39 @@
     header {
       background-color: #008080;
       color: white;
-      padding: 20px 0 50px 0;
+      padding: 40px 20px 40px 20px;
       text-align: center;
       position: relative;
+      box-sizing: border-box;
     }
 
+    /* Logo maior centralizado */
     header img {
-      max-height: 80px;
+      width: 200px; /* tamanho maior */
+      height: auto;
       display: block;
-      margin: 0 auto 15px auto;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
       margin: 0 auto;
-      display: inline-block;
-      position: relative; /* referência para as bandeiras */
-      letter-spacing: 0.05em;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Container das bandeiras, posicionadas absolutamente */
+    /* Bandeiras idioma no canto superior direito */
     .lang-selector {
       position: absolute;
-      top: 50%; /* centro vertical do header */
-      transform: translateY(-50%);
-      left: calc(50% + 140px); /* ajusta para posicionar à direita do texto */
+      top: 15px;
+      right: 20px;
       display: flex;
-      gap: 2px;
+      gap: 5px;
       cursor: pointer;
       user-select: none;
+      z-index: 10;
     }
 
-    /* Ajuste fino para a ponta verde alinhar exatamente */
     .lang-selector button {
       background-color: transparent;
       border: none;
-      font-size: 32px;
+      font-size: 28px;
       line-height: 1;
       padding: 0;
       margin: 0;
-      user-select: none;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -65,13 +56,6 @@
       background-color: #e65100;
       color: white;
       border-radius: 5px;
-    }
-
-    header p {
-      margin-top: 12px;
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #ccf0f0;
     }
 
     nav {
@@ -165,12 +149,8 @@
     @media (max-width: 768px) {
       .lang-selector {
         position: static;
-        transform: none;
         margin-top: 10px;
         justify-content: center;
-      }
-      header h1 {
-        display: block;
       }
       nav a {
         display: block;
@@ -187,12 +167,10 @@
 
   <header>
     <img src="images/logo.png" alt="Casa Feliz Logo" />
-    <h1 data-pt="Casa Feliz" data-en="Happy Home">Casa Feliz</h1>
     <div class="lang-selector" aria-label="Selecionar idioma">
       <button onclick="switchLang('pt')" aria-label="Português">🇵🇹</button>
       <button onclick="switchLang('en')" aria-label="English">🇬🇧</button>
     </div>
-    <p data-pt="Ligue a sua casa ao Futuro" data-en="Connect your home to the future">Ligue a sua casa ao Futuro</p>
   </header>
 
   <nav>
@@ -248,8 +226,8 @@
       <h2 data-pt="Contacto" data-en="Contact">Contacto</h2>
       <ul>
         <li>👤 Fundador: Carlos Oliveira</li>
-        <li>📱 WhatsApp: <a href="https://wa.me/351965064119" target="_blank">+351 965 064 119</a></li>
-        <li>📸 Instagram: <a href="https://instagram.com/casaagiloficial" target="_blank">@casaagiloficial</a></li>
+        <li>📱 WhatsApp: <a href="https://wa.me/351000000000" target="_blank">+351 000 000 000</a></li>
+        <li>📸 Instagram: <a href="https://www.instagram.com/casafeliz_2025?utm_source=qr&igsh=bXV6ZnpvcTVzYzZo" target="_blank">casafeliz</a></li>
         <li>✉️ Email: <a href="mailto:casafeliz_2025@hotmail.com">casafeliz_2025@hotmail.com</a></li>
       </ul>
     </section>
@@ -273,6 +251,5 @@
     }
     window.onload = loadLang;
   </script>
-
 </body>
 </html>
