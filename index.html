@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casa Feliz – Domótica e Automação Residencial</title>
+  <meta name="description" content="Descubra soluções de domótica com produtos inteligentes compatíveis com Tuya, Alexa e Google Home. Transforme a sua casa com a Casa Feliz." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #008080;
+      color: white;
+      padding: 20px 0 50px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      max-height: 80px;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0 auto;
+      display: inline-block;
+      position: relative; /* referência para as bandeiras */
+      letter-spacing: 0.05em;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Container das bandeiras, posicionadas absolutamente */
+    .lang-selector {
+      position: absolute;
+      top: 50%; /* centro vertical do header */
+      transform: translateY(-50%);
+      left: calc(50% + 140px); /* ajusta para posicionar à direita do texto */
+      display: flex;
+      gap: 2px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Ajuste fino para a ponta verde alinhar exatamente */
+    .lang-selector button {
+      background-color: transparent;
+      border: none;
+      font-size: 32px;
+      line-height: 1;
+      padding: 0;
+      margin: 0;
+      user-select: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .lang-selector button:hover {
+      background-color: #e65100;
+      color: white;
+      border-radius: 5px;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #ccf0f0;
+    }
+
+    nav {
+      background-color: #e0e0e0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #008080;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #e65100;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 10px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+      color: #e65100;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #128c4a;
+    }
+
+    section#sobre, section#contacto, section#domotica {
+      margin: 60px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #e65100;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    footer {
+      background-color: #008080;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .lang-selector {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        justify-content: center;
+      }
+      header h1 {
+        display: block;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Casa Feliz Logo" />
+    <h1 data-pt="Casa Feliz" data-en="Happy Home">Casa Feliz</h1>
+    <div class="lang-selector" aria-label="Selecionar idioma">
+      <button onclick="switchLang('pt')" aria-label="Português">🇵🇹</button>
+      <button onclick="switchLang('en')" aria-label="English">🇬🇧</button>
+    </div>
+    <p data-pt="Ligue a sua casa ao Futuro" data-en="Connect your home to the future">Ligue a sua casa ao Futuro</p>
+  </header>
+
+  <nav>
+    <a href="#home" data-pt="Início" data-en="Home">Início</a>
+    <a href="#produtos" data-pt="Produtos" data-en="Products">Produtos</a>
+    <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+    <a href="#contacto" data-pt="Contacto" data-en="Contact">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2 data-pt="Bem-vindo à Casa Feliz!" data-en="Welcome to Casa Feliz!">Bem-vindo à Casa Feliz!</h2>
+      <p data-pt="Escolha os melhores produtos para tornar a sua casa ainda mais feliz." data-en="Choose the best products to make your home happier.">Escolha os melhores produtos para tornar a sua casa ainda mais feliz.</p>
+    </section>
+
+    <section id="produtos" class="products">
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/H71b2656d99bc4df4b282ef0a5c66f9c1X.jpg" alt="Interruptor Wi-Fi Inteligente" />
+        <h2 data-pt="Interruptor Wi-Fi Inteligente" data-en="Smart Wi-Fi Switch">Interruptor Wi-Fi Inteligente</h2>
+        <p data-pt="Controle luzes e aparelhos via app Tuya. Compatível com Alexa e Google Home." data-en="Control lights and devices via Tuya app. Compatible with Alexa and Google Home.">Controle luzes e aparelhos via app Tuya. Compatível com Alexa e Google Home.</p>
+        <div class="price">17,90€</div>
+        <a href="https://wa.me/351965064119" class="btn-whatsapp" target="_blank" data-pt="Encomendar no WhatsApp" data-en="Order via WhatsApp">Encomendar no WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="domotica">
+      <h2 data-pt="O que é Domótica?" data-en="What is Home Automation?">O que é Domótica?</h2>
+      <p data-pt="A domótica é a aplicação de tecnologia na automação residencial. Com ela, pode controlar luzes, sensores, eletrodomésticos e segurança da sua casa através de apps, voz ou até mesmo automaticamente. A Casa Feliz oferece soluções práticas e modernas para levar a domótica até si."
+         data-en="Home automation is the application of technology in residential automation. With it, you can control lights, sensors, appliances, and home security via apps, voice, or automatically. Casa Feliz offers practical and modern solutions to bring home automation to you.">
+        A domótica é a aplicação de tecnologia na automação residencial. Com ela, pode controlar luzes, sensores, eletrodomésticos e segurança da sua casa através de apps, voz ou até mesmo automaticamente. A Casa Feliz oferece soluções práticas e modernas para levar a domótica até si.
+      </p>
+    </section>
+
+    <section id="sobre">
+      <h2 data-pt="Sobre a Casa Feliz" data-en="About Casa Feliz">Sobre a Casa Feliz</h2>
+      <p
+        data-pt="Na 🏡 Casa Feliz, acreditamos que a automação residencial deve ser simples, acessível e elegante. Fundada por Carlos Oliveira, oferecemos produtos inteligentes e modernos compatíveis com Tuya Smart, Alexa e Google Home. O nosso objetivo é transformar casas comuns em espaços inteligentes, confortáveis e seguros, tudo com simplicidade e estilo."
+        data-en="At 🏡 Casa Feliz, we believe home automation should be simple, accessible, and stylish. Founded by Carlos Oliveira, we offer smart and modern products compatible with Tuya Smart, Alexa, and Google Home. Our goal is to transform ordinary houses into smart, comfortable, and secure spaces — all with simplicity and style.">
+        Na 🏡 Casa Feliz, acreditamos que a automação residencial deve ser simples, acessível e elegante. Fundada por Carlos Oliveira, oferecemos produtos inteligentes e modernos compatíveis com Tuya Smart, Alexa e Google Home. O nosso objetivo é transformar casas comuns em espaços inteligentes, confortáveis e seguros, tudo com simplicidade e estilo.
+      </p>
+      <ul style="max-width: 800px; margin: 20px auto; color: #555; font-size: 1.05em;">
+        <li>🛠️ Instalação simples e rápida</li>
+        <li>📦 Entregas em todo Portugal continental</li>
+        <li>💬 Apoio personalizado via WhatsApp</li>
+        <li>✅ Compatível com Alexa, Google Home e Tuya</li>
+      </ul>
+      <p data-pt="Junte-se à Casa Feliz e traga inovação e conforto para o seu dia a dia com tecnologia ao seu alcance." data-en="Join Casa Feliz and bring innovation and comfort to your daily life with technology within your reach.">
+        Junte-se à Casa Feliz e traga inovação e conforto para o seu dia a dia com tecnologia ao seu alcance.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2 data-pt="Contacto" data-en="Contact">Contacto</h2>
+      <ul>
+        <li>👤 Fundador: Carlos Oliveira</li>
+        <li>📱 WhatsApp: <a href="https://wa.me/351965064119" target="_blank">+351 965 064 119</a></li>
+        <li>📸 Instagram: <a href="https://instagram.com/casaagiloficial" target="_blank">@casaagiloficial</a></li>
+        <li>✉️ Email: <a href="mailto:casafeliz_2025@hotmail.com">casafeliz_2025@hotmail.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Casa Feliz &copy; 2025 — Criado por Carlos Oliveira •
+    <a href="https://github.com/carlos1974-creator/casafeliz" target="_blank" style="color: white;">GitHub</a>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      localStorage.setItem('lang', lang);
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+    function loadLang() {
+      const savedLang = localStorage.getItem('lang') || 'pt';
+      switchLang(savedLang);
+    }
+    window.onload = loadLang;
+  </script>
+
+</body>
+</html>
